@@ -1,0 +1,204 @@
+html {
+ margin:0;
+ overflow:hidden
+}
+body,
+p,
+a {
+ margin:0;
+}
+body {
+ box-sizing: border-box;
+ width: 300px;
+ height: 276px;
+ margin: 5px;
+}
+body > .md {
+ position: relative;
+ box-sizing: border-box;
+ background-image: url(%%mapa%%);
+ background-repeat: no-repeat;
+ border: 1px solid #e7e7e7;
+ width: 300px;
+ height: 276px;
+ overflow: hidden;
+}
+a:not(:last-of-type) {
+ position:absolute;
+ width:15px;
+ height:15px;
+ overflow:hidden;
+ font-size:0;
+ background-repeat:no-repeat;
+ transform:scale(0.33);
+ border-radius:100%;
+ box-shadow:1px 1px 3px 0 rgba(0,0,0,0.4);
+ transition:transform 0.5s ease
+}
+a:not(:last-of-type)::before {
+ content:"";
+ display:block;
+ background:#e5d411;
+ width:15px;
+ height:15px;
+ opacity:1;
+ transition:opacity 0.5s ease
+}
+body:hover a::before {
+ opacity:0
+}
+body:hover a:not(:last-of-type) {
+ transform:scale(0.7)
+}
+body a:not(:last-of-type):hover {
+ transform:scale(1)
+}
+a:last-of-type {
+ font-family:Noto,Arial,Helvetica,sans-serif;
+ transition:opacity 0.25s ease;
+ opacity:0;
+ position:absolute;
+ top: 0px;
+ right: 0px;
+ font-size: 8px;
+ color:white;
+ padding:3px 5px;
+ background:rgb(0,0,0);
+ background:rgba(0,0,0,0.7);
+ z-index:10;
+ border-radius:2px;
+ margin:0px;
+ text-decoration:none
+}
+body:hover a:last-of-type {
+ opacity:1
+}
+a[title="Andalucía"] {
+ background-image:linear-gradient(0deg,#007A33 33%,white 33%,white 66%,#007A33 66%);
+ left: 87px;
+ top: 199px;
+}
+a[title="Aragón"] {
+ background-image: linear-gradient(90deg,#C0AA12 50%,#0E43A6 0),linear-gradient(90deg,white 50%,#DC6E31 50%),repeating-linear-gradient(180deg,#FCDE03,#FCDE03 11.1%,#DB0914 11.1%,#DB0914 22.2%);
+ background-position: 50% 45%,50% 65%,0 0;
+ background-size: 28% 16%,28% 16%,100% 100%;
+ left: 185px;
+ top: 48px;
+}
+a[title="Principado de Asturias"] {
+ background-image: linear-gradient(0deg,#F7d510,#F7d510),linear-gradient(0deg,#F7d510,#F7d510),linear-gradient(0deg,#0066FF,#0066FF);
+ background-position: 26% 42%,29% 50%,0 0;
+ background-size: 17% 5%,5% 38%,100% 100%;
+ background-repeat: no-repeat;
+ left: 68px;
+ top: 7px;
+}
+a[title="Illes Balears"] {
+ background-image: linear-gradient(0deg,white,white), linear-gradient(0deg,#36105D,#36105D),repeating-linear-gradient(180deg,#FCDE03,#FCDE03 11.1%,#DB0914 11.1%,#DB0914 22.2%);
+ background-position: 10% 24%,0 0,0 0;
+ background-size: 28% 9%,50% 50%, 100% 100%;
+ left: 266px;
+ top: 92px;
+}
+a[title="Canarias"] {
+ background-image:linear-gradient(90deg,white 33%,#0963A0 33%,#0963A0 66%,#F1C201 66%);
+ left: 238px;
+ top: 250px;
+}
+a[title="Cantabria"] {
+ background-image: linear-gradient(0deg,gold,gold),linear-gradient(0deg,#0963A0,#0963A0),linear-gradient(0deg,#CE1126 50%,white 50%);
+ background-position: 50% 32%,50% 43%,0 0;
+ background-size: 20% 20%,20% 20%,100% 100%;
+ background-repeat: no-repeat;
+ left: 116px;
+ top: 1px;
+}
+a[title="Castilla y León"] {
+ background-image: linear-gradient(0deg,#FF0,#FF0),linear-gradient(0deg,#FF0,#FF0),linear-gradient(0deg,purple,purple),linear-gradient(0deg,purple,purple),linear-gradient(90deg,red 50%,white 0),linear-gradient(90deg,white 50%,red 50%);
+ background-position: 75% 75%,25% 25%,75% 25%,25% 75%,0 0,0 50%;
+ background-size: 15% 15%,15% 15%,15% 15%,15% 15%,100% 50%,100% 100%;
+ background-repeat: no-repeat;
+ left: 98px;
+ top: 65px;
+}
+a[title="Castilla-La Mancha"] {
+ background-image: linear-gradient(0deg,gold,gold),linear-gradient(90deg,#CE1126 50%,white 50%);
+ background-position: 20% 50%,0 0;
+ background-size: 25% 25%,100% 100%;
+ background-repeat: no-repeat;
+ left: 121px;
+ top: 119px;
+}
+a[title="Catalunya"] {
+ background-image: repeating-linear-gradient(180deg,#FCDE03,#FCDE03 11.1%,#DB0914 11.1%,#DB0914 22.2%);
+ left: 260px;
+ top: 41px;
+}
+a[title="Comunitat Valenciana"] {
+ background-image: linear-gradient(90deg,#006CB2 90%,#DB0914 10%),repeating-linear-gradient(180deg,#FCDE03,#FCDE03 11.1%,#DB0914 11.1%,#DB0914 22.2%);
+ background-position: 0 0,0 0;
+ background-size: 30% 100%,100% 100%;
+ top: 110px;
+ left: 213px;
+}
+a[title="Extremadura"] {
+ background-image: linear-gradient(90deg,#F5BE01 50%,#FD1419 0),linear-gradient(90deg,#0671b7,#0671b7),linear-gradient(0deg,black 33%,white 33%,white 66%,#05A136 66%);
+ background-position: 20% 45%,20% 60%,0 0;
+ background-size: 20% 13%,20% 12%,100% 100%;
+ left: 74px;
+ top: 145px;
+}
+a[title="Galicia"] {
+ background-image: linear-gradient(0deg,#0056B5 80%,#ff3944 0),linear-gradient(35deg,white 45%,#0091C3 45%,#0091C3 55%,white 50%);
+ background-position: 50% 50%,0 0;
+ background-size: 20% 25%,100% 100%;
+ left: 13px;
+ top: 18px;
+}
+a[title="Comunidad de Madrid"] {
+ background-image: linear-gradient(90deg,white 20%,#BC091C 20%,#BC091C 27%,white 27%,white 47%,#BC091C 47%,#BC091C 53%,white 53%,white 74%,#BC091C 74%,#BC091C 80%,white 80%,white 100%),linear-gradient(90deg,white 27%,#BC091C 27%,#BC091C 36%,white 36%,white 64%,#BC091C 64%,#BC091C 73%,white 73%,white 100%),linear-gradient(90deg,#BC091C,#BC091C);
+ background-position: 50% 44%,50% 60%,100% 100%;
+ background-size: 52% 12%,39% 12%,100% 100%;
+ left: 132px;
+ top: 90px;
+}
+a[title="Región de Murcia"] {
+ background-image: linear-gradient(0deg,#EFAC13,#EFAC13),linear-gradient(0deg,#EFAC13,#EFAC13),linear-gradient(90deg,#941E2B,#941E2B);
+ background-position: 5% 24%,86% 82%,0 0;
+ background-size: 25% 25%,25% 25%,100% 100%;
+ background-repeat: no-repeat;
+ left: 201px;
+ top: 161px;
+}
+a[title="Comunidad Foral de Navarra"] {
+ background-image: linear-gradient(0deg,#CF111A,#CF111A),linear-gradient(180deg,white 18%, gold 18%),linear-gradient(90deg,#CF111A,#CF111A);
+ background-position: 50% 55%,50% 50%,0 0;
+ background-size: 13% 17%,21% 34%,100% 100%;
+ background-repeat: no-repeat;
+ left: 169px;
+ top: 20px;
+}
+a[title="País Vasco"] {
+ background-image: linear-gradient(90deg,#e7e7e7,#e7e7e7),linear-gradient(0deg,#e7e7e7,#e7e7e7),linear-gradient(37deg,transparent 45%,#009344 45%,#40914D 54%,transparent 54%),linear-gradient(-37deg,transparent 45%,#009344 45%,#009344 54%,transparent 54%),linear-gradient(0deg,#CA291C,#ca291c);
+ background-position: 0% 50%,50% 0,0 0,0 0,0 0;
+ background-size: 100% 5%,5% 100%,100% 100%,100% 100%,100% 100%;
+ background-repeat: no-repeat;
+ left: 145px;
+ top: 11px;
+}
+a[title="La Rioja"] {
+ background-image: linear-gradient(90deg,red 50%, yellow 50%),linear-gradient(180deg,gold 18%,#2961A1 18%),linear-gradient(0deg,#F7CB50 27%,#7BBB42 27%,#7BBB42 50%,white 50%,white 73%,#CB3929 73%);
+ background-position: 50% 55%,50% 50%,0 0;
+ background-size: 12% 14%,21% 34%,100% 100%;
+ background-repeat: no-repeat;
+ left: 153px;
+ top: 30px;
+}
+a[title="Ceuta Y Melilla"] {
+ background-image: linear-gradient(0deg,gold,gold),linear-gradient(0deg,#4193D0,#4193D0);
+ background-position: 50% 50%,0 0;
+ background-size: 25% 25%,100% 100%;
+ background-repeat: no-repeat;
+ left: 131px;
+ bottom: 1px;
+}
